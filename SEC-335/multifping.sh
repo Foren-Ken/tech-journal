@@ -5,6 +5,6 @@ do
         full=$static$ip
 
         if fping -c 1 -t 100 $full; 
-                then echo $full > sweep2.txt
+                then echo $full >> sweep2.txt
         fi
 done
