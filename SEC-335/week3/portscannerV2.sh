@@ -8,7 +8,7 @@ checkvalid() { # This function is responsible for checking the valdiity of the  
 	[[ $(echo "$ip" | tr '.' '\n' | awk '$1 <= 255' | wc -l) -eq $((segments+1)) ]]; then 
 	# Checks if there are 4 segments (a bit of redundancy)
 
-		return 0 # If the function did not find the statement untrue, return with a "succes"
+		return 0 # If the function did not find the statement untrue, return with a "success"
 	else
 		return 1 # If the function found the statement untrue, return with a "failure"
 	fi
