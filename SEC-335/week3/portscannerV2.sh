@@ -54,9 +54,10 @@ done
 
 # echo ${special[@]}
 
-# checkport normal $portfile $savefile
+checkport normal $portfile $savefile
 for element in "${special[@]}"; do
 	echo "$element Results"
+	echo "$element Results" >> $savefile
 	for odd in ${element[@]}; do
 		superspecial=($odd.{1..254}) # For each item in special, this will contain all ip addresses between 1 and 254
 		# echo ${superspecial[@]}
